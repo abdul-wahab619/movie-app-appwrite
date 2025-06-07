@@ -112,9 +112,19 @@ function App() {
               ) : (
                 <ul>
                   {trendingMovies.map((movie, index) => (
-                    <li key={movie.$id || index}>
-                      <p>{index + 1}</p>
-                      <img src={movie.poster_url} alt={movie.title} />
+                    <li
+                      key={movie.$id || index}
+                      className="min-w-[230px] flex flex-row items-center opacity-0 animate-fadeInUp"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <p className="fancy-text mt-[22px] text-nowrap">
+                        {index + 1}
+                      </p>
+                      <img
+                        src={movie.poster_url}
+                        alt={movie.title}
+                        className="w-[127px] h-[163px] rounded-lg object-cover -ml-3.5 hover:scale-105 transition-transform duration-300 hover:w-full hover:transform-3d"
+                      />
                     </li>
                   ))}
                 </ul>
