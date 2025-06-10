@@ -21,38 +21,20 @@
 }
 
 @layer base {
-  * {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     background: #030014;
-    @apply bg-primary text-white dark:bg-white dark:text-black;
   }
 
-  h1,
+  h1 {
+    @apply mx-auto max-w-4xl text-center text-5xl font-bold leading-tight tracking-[-1%] text-white sm:text-[64px] sm:leading-[76px];
+  }
+
   h2 {
-    @apply text-white dark:text-black;
+    @apply text-2xl font-bold text-white sm:text-3xl;
   }
 
-  .movie-card {
-    @apply bg-dark-100 text-white dark:bg-light-100 dark:text-black;
-  }
-
-  .search {
-    @apply bg-light-100/5 dark:bg-gray-100 dark:text-black;
-  }
-
-  .content span,
-  .content .lang,
-  .content .year {
-    @apply text-gray-100 dark:text-gray-800;
-  }
-
-  .rating p {
-    @apply text-white dark:text-black;
-  }
   main {
     @apply min-h-screen relative bg-primary;
   }
